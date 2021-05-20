@@ -15,8 +15,10 @@
     font-size: small;
     padding-bottom: 0px;
 }
-
-
+.nav-item:hover {
+    border-bottom: 2px solid gray;
+    color: black;
+}
 
 
 
@@ -65,8 +67,25 @@ body{
     text-shadow: 2px 2px 3px gray;
 }
 
+.btn-enquire{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 35px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
 
-
+.btn-enquire:hover {
+    background: #4393df;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
 
 /* font styles  */
 .font1{
@@ -82,7 +101,15 @@ body{
 
 
 
-/* Services styles  */
+h2:after {
+    content:'';
+    display:block;
+    height:0.1em;
+    width:5%;
+    margin:auto;
+    padding-top: 15px;
+    border-bottom:solid ;
+  }
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -104,26 +131,39 @@ body{
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-
+        width: 70%;
     }
   }
 
 .service {
-    width: 300px;
-    height: 325px;
-    /* position: relative; */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
 }
 
-.overlay::before {
-    
-    
+.serviceImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: -1;
 }
 
 .overlay {
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.6); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    border-radius: 100;
+    transition: .5s ease;
+    opacity:1;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
 }
 
 .title {
@@ -134,9 +174,28 @@ body{
     
 }
 
-/* .serviceText{
-    position: absolute;
-} */
+.title:after {
+    content:'';
+    display:block;
+    height:0.2em;
+    width:25%;
+    margin:auto;
+    border-bottom:solid ;
+  }
+
+.caption {
+    display: none;
+}
+
+.service:hover .caption{
+    display: block;
+    z-index: 2;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    font-size: large;
+    text-align: center;
+}
+
 
 
 
@@ -149,6 +208,7 @@ body{
     color: whitesmoke;
     padding-top: 20px;
     font-size: small;
+    border-top: 10px double whitesmoke;
 }
 
 /* Fonts
